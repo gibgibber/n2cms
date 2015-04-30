@@ -1,5 +1,4 @@
 using System;
-using System.Web;
 using N2.Configuration;
 using N2.Definitions;
 using N2.Engine;
@@ -65,8 +64,8 @@ namespace N2.Edit
             try
             {
                 // If hostname == localhost, then don't use custom hostnames in the management navigation tree
-                if (HttpContext.Current != null && HttpContext.Current.Request.Url.Host == "localhost")
-                    return selectedItem.FindPath(PathData.DefaultAction).GetRewrittenUrl();
+								//if (HttpContext.Current != null && HttpContext.Current.Request.Url.Host == "localhost")
+								//		return selectedItem.FindPath(PathData.DefaultAction).GetRewrittenUrl();
 
                 Url url = ResolveResourceUrl(parser.BuildUrl(selectedItem));
                 return url;
